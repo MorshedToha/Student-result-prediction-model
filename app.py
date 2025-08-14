@@ -1,8 +1,6 @@
 import streamlit as st
 import pandas as pd
 import joblib
-import pkg_resources
-print([p.project_name for p in pkg_resources.working_set])
 
 # Load the trained pipeline
 model = joblib.load("best_student_performance_pipeline.joblib")
@@ -36,5 +34,6 @@ if uploaded_file is not None:
         file_name="predictions.csv",
         mime="text/csv"
     )
+
 
 
