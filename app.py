@@ -3,8 +3,7 @@ import pandas as pd
 import joblib
 
 # Load the trained pipeline
-with open("best_student_performance_pipeline.joblib", 'rb') as f:
-    model = joblib.load(f)
+model = joblib.load("best_student_performance_pipeline.joblib")
 
 st.title("🎓 Student Performance Prediction")
 st.write("Upload a CSV file with student academic data to get Pass/Fail predictions.")
@@ -35,6 +34,7 @@ if uploaded_file is not None:
         file_name="predictions.csv",
         mime="text/csv"
     )
+
 
 
 
